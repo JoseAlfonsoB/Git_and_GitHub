@@ -1,5 +1,4 @@
-![[git-github.jpeg]]
-
+![Portada](IMGs/git-github.jpeg)
 ## Introducción general
 
 Estas notas están pensadas para reunir lo más importante sobre **Git** y **GitHub**, dos herramientas clave en el mundo del desarrollo. Git nos permite llevar un control preciso de los cambios en nuestros proyectos, mientras que GitHub facilita el trabajo en equipo y la colaboración en línea.
@@ -14,8 +13,7 @@ La idea de este curso es entender cómo funcionan, qué comandos son esenciales 
 
 > **Ej:**  Funciona como los **mensajes de WhatsApp**, en donde nosotros podemos ver todos los **mensajes anteriores**.
 
-![[GIT-RAMAS.png]]
-
+![Ramas-Git](IMGs/GIT-RAMAS.png)
 Git es un sistema de control de versiones distribuido ==diseñado para rastrear cambios== y ==coordinar== el ==trabajo colaborativo== en proyectos de software.
 
 ### Conceptos clave de Git
@@ -36,8 +34,7 @@ Git es un sistema de control de versiones distribuido ==diseñado para rastrear 
 > **NOTA:** Cuando en un directorio nos encontramos con un **directorio oculto** `".git"` eso quiere decir que **ese directorio ya a sido** o esta siendo **trabajado** con el **control de versiones de Git**.
 
 #### Ramas en Git
-![[Git Ramas.png]]
-
+![Ramas](<IMGs/Git Ramas.png>)
 La rama **master o main**  es la **rama base** sobre la cual esta **montada el proyecto principal**.
 
 - `git add`: Nos permite **agregar archivos y/o carpetas** a nuestro **proyecto principal** inicializado en Git.
@@ -96,8 +93,7 @@ git config --global --unset alias.nombre-del-alias
 
 ###### Ejemplo de la creación de alias típicos
 
-![[ALIAS.png]]
-
+![Alias-Git](IMGs/ALIAS.png)
 ### .gitignore
 
 El archivo `.gitignore` es un archivo de texto que **le indica a Git que archivos o directorios debe ignorar en el repositorio**.
@@ -118,7 +114,7 @@ Es especialmente útil para **excluir archivos generados** **automáticamente**,
 - `git diff`: Nos permite **visualizar todos los cambios realizados** que **no** hayan sido **guardados** en el **Working Directory**.
 - Muestra las modificaciones actuales (sin usar `git add`).
 - Es **ideal para revisar que cosas se han editado antes de** preparar archivos para **hacer** `commit`
-![[git diff.png]]
+![git-diff](<IMGs/git diff.png>)
 
 - **-** : Lineas eliminadas (rojo en la terminal)
 - **+** : Lineas añadidas (verde en la terminal)
@@ -148,8 +144,7 @@ Para ==regresar== a tu ==rama principal==
 git checkout "nombre-de-la-rama"
 ```
 
-![[Desplazamientos-en-Git.png]]
-
+![Desplazamientos-en-Git](IMGs/Desplazamientos-en-Git.png)
 #### Git reset --hard & Git reflog
 
 - `git reset --hard`: ==Borra todo lo que no esta guardado en un commit==.
@@ -185,8 +180,7 @@ git reset --hard "hash-del-commit"
 git reset --hard f4e5dec
 ```
 
-![[git reset --hard && git reflog.png]]
-
+![git-reset](<IMGs/git reset --hard && git reflog.png>)
 ### Tags en Git
 
 ##### ¿Qué son las Tags en Git?
@@ -230,8 +224,7 @@ Imagina un árbol.
 - Las ramas son derivaciones donde puedes probar cosas nuevas sin romper el tronco.
 ```
 
-![[Git Ramas.png]]
-
+![Ramas-Git](<IMGs/Git Ramas.png>)
 ##### ¿Cómo funcionan?
 
 1. ==Cada rama apunta a un commit== especifico.
