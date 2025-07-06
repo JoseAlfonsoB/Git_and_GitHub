@@ -1,39 +1,31 @@
-<img src="./IMGs/Git-and-GitHub.png" style="width: 100%; height:300px; border-radius: 25px">
+<img src="./IMGs/Git-and-GitHub.png" style="width: 100%; height:400px; margin: 0;">
 
 ## 📌 Introducción general
 
+Estas notas están pensadas para reunir lo más importante sobre **Git** y **GitHub**, dos herramientas clave en el mundo del desarrollo. Git nos permite llevar un control preciso de los cambios en nuestros proyectos, mientras que GitHub facilita el trabajo en equipo y la colaboración en línea.
 
-Estas notas están pensadas para reunir lo más importante sobre Git y GitHub, dos herramientas clave en el mundo del desarrollo. Git nos permite llevar un control preciso de los cambios en nuestros proyectos, mientras que GitHub facilita el trabajo en equipo y la colaboración en línea.
+➡️ Aquí vas a encontrar **explicaciones con ejemplos, analogías y comandos prácticos** que ayudan a recordar mejor el funcionamiento de estas herramientas, especialmente útil si estás empezando o necesitas repasar.
 
-➡️ Aquí vas a encontrar explicaciones con ejemplos, analogías y comandos prácticos que ayudan a recordar mejor el funcionamiento de estas herramientas, especialmente útil si estás empezando o necesitas repasar.
+> ✏️ Estas notas no son formales ni académicas. Son apuntes que armé por mi cuenta mientras aprendía, explicados como me hubiera gustado que me los explicaran.
 
-✏️ Estas notas no son formales ni académicas. Son apuntes que armé por mi cuenta mientras aprendía, explicados como me hubiera gustado que me los explicaran.
+### 🔍 ¿Qué contiene este repositorio?
 
-🔍 ¿Qué contiene este repositorio?
-
-📖 Introducción conceptual a Git y GitHub
-
-🧠 Comandos esenciales con explicaciones claras
-
-🌿 Gestión de ramas, stash, tags, reset y reflog
-
-🔐 Autenticación con SSH en GitHub
-
-🤝 Uso de Pull Requests, forks y buenas prácticas
-
-💡 ¿Por qué hice esto?
+- 📖 Introducción conceptual a Git y GitHub
+- 🧠 Comandos esenciales con explicaciones claras
+- 🌿 Gestión de ramas, stash, tags, reset y reflog
+- 🔐 Autenticación con SSH en GitHub
+- 🤝 Uso de Pull Requests, forks y buenas prácticas
+- 💡 ¿Por qué hice esto?
 
 Aprender Git y GitHub desde cero puede parecer intimidante. Esta guía nace de mi propia necesidad de comprenderlo todo de forma simple, visual y útil. Lo comparto por si alguien más encuentra aquí algo que le sirva o le ayude a entender mejor.
 
-🧩 Recomendado para:
+### 🧩 Recomendado para:
 
-Estudiantes de desarrollo web o software
+- Estudiantes de desarrollo web o software
+- Personas que están iniciando en proyectos colaborativos
+- Developers que quieren tener una guía de repaso práctica
 
-Personas que están iniciando en proyectos colaborativos
-
-Developers que quieren tener una guía de repaso práctica
-
-✅ ¿Qué hace especial a esta guía?
+### ✅ ¿Qué hace especial a esta guía?
 
 ✅ Está explicada con ejemplos simples y reales
 
@@ -43,6 +35,7 @@ Developers que quieren tener una guía de repaso práctica
 
 ✅ No está sobrecargada con teoría innecesaria
 
+---
 ## Introducción a Git
 
 ### Concepto de Git
