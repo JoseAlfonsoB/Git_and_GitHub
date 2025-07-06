@@ -1,4 +1,5 @@
-![Portada](IMGs/git-github.jpeg)
+<img src="./IMGs/git-github.jpeg" style="width: 100%-10px; height:500px; margin: auto;">
+
 ## Introducción general
 
 Estas notas están pensadas para reunir lo más importante sobre **Git** y **GitHub**, dos herramientas clave en el mundo del desarrollo. Git nos permite llevar un control preciso de los cambios en nuestros proyectos, mientras que GitHub facilita el trabajo en equipo y la colaboración en línea.
@@ -14,6 +15,7 @@ La idea de este curso es entender cómo funcionan, qué comandos son esenciales 
 > **Ej:**  Funciona como los **mensajes de WhatsApp**, en donde nosotros podemos ver todos los **mensajes anteriores**.
 
 ![Ramas-Git](IMGs/GIT-RAMAS.png)
+
 Git es un sistema de control de versiones distribuido ==diseñado para rastrear cambios== y ==coordinar== el ==trabajo colaborativo== en proyectos de software.
 
 ### Conceptos clave de Git
