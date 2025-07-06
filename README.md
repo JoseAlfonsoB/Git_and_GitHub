@@ -1,4 +1,4 @@
-<img src="./IMGs/Git-and-GitHub.png" style="width: 100%; height:300px; border-radius: 8px">
+<img src="./IMGs/Git-and-GitHub.png" style="width: 100%; height:300px; border-radius: 15px">
 
 ## Introducción general
 
