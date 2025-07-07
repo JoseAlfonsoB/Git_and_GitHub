@@ -46,12 +46,12 @@ Aprender Git y GitHub desde cero puede parecer intimidante. Esta guía nace de m
 
 ![Ramas-Git](IMGs/GIT-RAMAS.png)
 
-Git es un sistema de control de versiones distribuido ==diseñado para rastrear cambios== y ==coordinar== el ==trabajo colaborativo== en proyectos de software.
+Git es un sistema de control de versiones distribuido **diseñado para rastrear cambios** y **coordinar** el **trabajo colaborativo** en proyectos de software.
 
 ### Conceptos clave de Git
 
-- **Control de versiones:** ==Registra el historial de cambios en archivos==, permitiendo ==revertir==, ==compartir== y ==recuperar== versiones anteriores.
-- **Distribuido:** ==Cada desarrollador tiene una copia== completa del repositorio, lo que ==permite trabajar sin conexión== y facilita la redundancia
+- **Control de versiones:** **Registra el historial de cambios en archivos**, permitiendo **revertir**, **compartir** y **recuperar** versiones anteriores.
+- **Distribuido:** **Cada desarrollador tiene una copia** completa del repositorio, lo que **permite trabajar sin conexión** y facilita la redundancia
 
 > **NOTA:** Sistemas operativos como LInux y MacOS ya tienen Git instalado por defecto aún que puede que no sea la ultima versión.
 
@@ -148,8 +148,8 @@ Es especialmente útil para **excluir archivos generados** **automáticamente**,
 - Es **ideal para revisar que cosas se han editado antes de** preparar archivos para **hacer** `commit`
 ![git-diff](<IMGs/git diff.png>)
 
-- **-** : Lineas eliminadas (rojo en la terminal)
-- **+** : Lineas añadidas (verde en la terminal)
+ <p style="color: #E3170A; font-weight: bold;">- : Lineas eliminadas (rojo en la terminal)</p>
+<p style="color: #70EE9C; font-weight: bold;">+ : Lineas añadidas (verde en la terminal)</p>
 
 ### Desplazamiento en una rama (Moverse entre commits)
 
@@ -164,13 +164,13 @@ Esto **permite inspeccionar, modificar o recuperar estados  anteriores** del pro
 
 ##### 2.- Comandos para desplazarse
 
-- `gig checkout`: ==Permite moverse a un commit en especifico== (sin modificar la rama). 
+- `gig checkout`: **Permite moverse a un commit en especifico** (sin modificar la rama). 
 
 ```bash
 git checkout "hash-del-commit"
 ```
 
-Para ==regresar== a tu ==rama principal== 
+Para **regresar** a tu **rama principal** 
 
 ```bash
 git checkout "nombre-de-la-rama"
@@ -179,24 +179,24 @@ git checkout "nombre-de-la-rama"
 ![Desplazamientos-en-Git](IMGs/Desplazamientos-en-Git.png)
 #### Git reset --hard & Git reflog
 
-- `git reset --hard`: ==Borra todo lo que no esta guardado en un commit==.
+- `git reset --hard`: **Borra todo lo que no esta guardado en un commit**.
 	- Cambios en tus archivos
 	- Commits recientes
-==Puedes mover tu rama a un commit anterior== (_es como retroceder en el tiempo_).
+**Puedes mover tu rama a un commit anterior** (es como retroceder en el tiempo).
 
 ##### ¿Cuándo usarlo?
 
-- Cuando quieres ==hacer commits locales==.
+- Cuando quieres **hacer commits locales**.
 - Cuando todo esta tan mal que quieres volver a un punto seguro.
 ```bash
 git reset --hard "hash-del-commit"
 ```
 
-- `git reflog`: ==Muestra todo lo que has hecho en git== (_incluso lo que borraste_).
+- `git reflog`: **Muestra todo lo que has hecho en git** (incluso lo que borraste).
 
 ##### ¿Cuándo usar git reflog?
 
-- Si borraste un commit por error (_con `git reset --hard` o `git rebase`_).
+- Si borraste un commit por error (con `git reset --hard` o `git rebase`).
 - Si usaste un `merge/rebase` y todo se rompo y quieres volver atrás.
 - Si accidentalmente borraste una rama y necesitas recuperar su ultimo commit.
 
@@ -205,7 +205,7 @@ git reset --hard "hash-del-commit"
 **Situación:** Borraste los dos últimos commits con `git reset --hard HEAD~2` y te arrepentiste.
 
 1. Usa `git reflog` para encontrar los últimos `hashes` de los commits borrados.
-2. Selecciona el `hash` del commit al que quieres volver (_Ej: f4e5dec_) -
+2. Selecciona el `hash` del commit al que quieres volver (Ej: f4e5dec)
 3. Recuperalo con:
 
 ```bash
@@ -217,37 +217,37 @@ git reset --hard f4e5dec
 
 ##### ¿Qué son las Tags en Git?
 
-Los ==tags son como "_marcadores_"==  o "_versiones oficiales_" ==que se colocan en== commits específicos para señalar ==puntos importantes en el historial del proyecto==  (_Ej: lanzamiento de la versión como **v1.0.0**, **v2.3.0**_).
+Los **tags son como "marcadores"**  o "versiones oficiales" **que se colocan en** commits específicos para señalar **puntos importantes en el historial del proyecto**  (Ej: lanzamiento de la versión como **v1.0.0**, **v2.3.0**).
 
 ##### Analogía
 
-Imagina que tu proyecto es un libro. Los **commits son las páginas** y los **tags son "post-it"** pegados a páginas clave como "_Capitulo 1_" o "_Edición FInal_".
+Imagina que tu proyecto es un libro. Los **commits son las páginas** y los **tags son "post-it"** pegados a páginas clave como "Capitulo 1" o "Edición FInal".
 
 ###### Tipos de Tags
 
 - **Lightwight Tags**
-		Son ==etiquetas simples== (_solo un nombre apunto a un commit_).
+		Son etiquetas simples (solo un nombre apunto a un commit).
 
 ```bash
 git tag V1.0.1
 ```
 
 - **Annotated Tags**
-		==Incluyen metadatos== (_autor, fecha, mensaje descriptivo y firma PGG_)
+		Incluyen metadatos (autor, fecha, mensaje descriptivo y firma PGG)
 
 	<div style = "border: solid 1px; border-radius: 15px; padding: 10px; display: column;">
-	<p style="color: red; font-wieght: bold;">IMPORTANTE!</p>Recomendado para versiones oficiales.
+	<p style="color: red; font-weight: bold;">IMPORTANTE!</p>Recomendado para versiones oficiales.
 	</div>
 
 ```bash
 git tag -a V2.0.0 -m "mesanje"
 ```
 
-> NOTA: Con **Git tag** ==podemos ver todas nuestras etiquetas== creadas.
+> NOTA: Con **Git tag** **podemos ver todas nuestras etiquetas** creadas.
 
 ### Ramas en Git
 
-Las ramas en Git ==son lineas de desarrollo independientes== que ==permiten trabajar en diferentes características, creaciones o experimentos==  sin afectar el código principal.
+Las ramas en Git **son lineas de desarrollo independientes** que **permiten trabajar en diferentes características, creaciones o experimentos** sin afectar el código principal.
 
 ##### Analogía 
 ```txt
@@ -259,42 +259,42 @@ Imagina un árbol.
 ![Ramas-Git](<IMGs/Git Ramas.png>)
 ##### ¿Cómo funcionan?
 
-1. ==Cada rama apunta a un commit== especifico.
-2. Los ==cambios== de una rama son ==aislados: No se afectan otras ramas hasta que se fusionan== (_merge_).
-3. ==Puedes crear, eliminar o fusionar ramas== en cualquier momento.
+1. **Cada rama apunta a un commit** especifico.
+2. Los cambios de una rama son **aislados: No se afectan otras ramas hasta que se fusionan (merge).
+3. **Puedes crear, eliminar o fusionar ramas** en cualquier momento.
 
 ##### Comandos esenciales
 
-1. `git branch` (_gestiona ramas_)
-	Se pueden ==ver==, ==crear== o ==eliminar ramas==.
+1. `git branch` (gestiona ramas)
+	Se pueden **ver**, **crear** o **eliminar ramas**.
 
 
-| Comando                       | Descripción                                            |
-| ----------------------------- | ------------------------------------------------------ |
-| `git branch`                  | ==Lista todas las ramas== (_indica la actual_)         |
-| `git branch "nombre-rama"`    | ==Crea== una ==rama nueva== (_pero no cambia a ella_)  |
-| `git branch -d "nombre-rama"` | ==Borra== una ==rama local== (_si ya fue fusionada_)   |
-| `git branch -D "nombre-rama"` | ==Fuerza== el ==borrado== (_aunque no este fusionada_) |
-2. `git switch` (_cambia entre ramas_)
+| Comando                       | Descripción                                          |
+| ----------------------------- | ---------------------------------------------------- |
+| `git branch`                  | **Lista todas las ramas** (indica la actual)         |
+| `git branch "nombre-rama"`    | **Crea** una **rama nueva** (pero no cambia a ella)  |
+| `git branch -d "nombre-rama"` | **Borra** una **rama local** (si ya fue fusionada)   |
+| `git branch -D "nombre-rama"` | **Fuerza** el **borrado** (aunque no este fusionada) |
+2. `git switch` (cambia entre ramas)
 
-	==Moverse entre ramas== existentes.
+	**Moverse entre ramas** existentes.
 
 
 | Comando                       | Descripción                                      |
 | ----------------------------- | ------------------------------------------------ |
-| `git swith "nombre-rama"`     | ==Cambia== a la ==rama== especificada            |
-| `git switch -c "nombre-rama"` | ==Crea== una ==rama nueva== y ==cambia a ella==. |
-3. `git merge` (_fusionar ramas_)
-	==Combina== los ==cambios de una rama== a ==otra== (_Ej: traer "login" a "main"_)
+| `git swith "nombre-rama"`     | **Cambia** a la **rama** especificada            |
+| `git switch -c "nombre-rama"` | **Crea** una **rama nueva** y **cambia a ella**. |
+3. `git merge` (fusionar ramas)
+	**Combina** los **cambios de una rama** a **otra** (Ej: traer "login" a "main")
 ##### Pasos típicos
 
-1. ==Posicionarte en la rama destino== (_Ej: "main"_)
+1. **Posicionarte en la rama destino** (Ej: "main")
 
 ```bash
 git switch main
 ```
 
-2. ==Fusionar la rama deseada==.
+2. **Fusionar la rama deseada**.
 
 ```bash
 git merge login
@@ -304,7 +304,7 @@ git merge login
 
 ##### ¿Qué es el Stash en Git?
 
-El **stash** es un "_cajon temporal_" donde ==git guarda cambios no guardados== (_en el Workging Directory o en el Staging Area_) ==para que puedas cambiar de ramas sin perder los cambios==.
+El **stash** es un "cajon temporal" donde **git guarda cambios no guardados** (en el Workging Directory o en el Staging Area) **para que puedas cambiar de ramas sin perder los cambios**.
 
 ###### Analogía
 ```txt
@@ -313,41 +313,41 @@ Imagina que estas escribiendo un documento y alguien te interrumpe. En lugar de 
 
 ###### Comandos esenciales
 
-1. `git stash`: (_**guarda** cambios temporales_)
+1. `git stash`: (**guarda** cambios temporales)
 		**Gurda todos los cambias no commitados** en el stash.
 
 
 | Comando           | Descripción                                 |
 | ----------------- | ------------------------------------------- |
-| `git stash`       | ==Guarda archivos temporales==              |
-| `git stash -m ""` | ==Guarda con== un ==mensaje personalizado== |
-2. `git stash list` (_Ver todos los stash guardados_)
-		==Muestra== una ==lista de stash== (_guardados como pilas: El ultimo en entrar es el primero en salir_).
-3. `git stash apply` (_Recuperar cambios_)
-		==Recupera== los ==cambios del stash sin borrarlos de la lista==.
+| `git stash`       | **Guarda archivos temporales**              |
+| `git stash -m ""` | **Guarda con** un **mensaje personalizado** |
+2. `git stash list` (Ver todos los stash guardados)
+		**Muestra** una **lista de stash** (guardados como pilas: El ultimo en entrar es el primero en salir).
+3. `git stash apply` (Recuperar cambios)
+		**Recupera** los **cambios del stash sin borrarlos de la lista**.
 
 ```bash
 git stash apply
 git stash apply "id-stash"
 ```
 
-4. `git stash pop` (_Recupera y borrar_)
-		==Recupera los cambios== y ==elimina el stash de la lista==.
+4. `git stash pop` (Recupera y borrar)
+		**Recupera los cambios** y **elimina el stash de la lista**.
 
 ```bash
 git stash pop
 git stash pop "id-stash"
 ```
 
-5. `git stash drop` (_Elimina un stash_)
-		==Elimina== un ==stash especifico sin aplicarlo ==.
+5. `git stash drop` (Elimina un stash)
+		**Elimina** un **stash especifico sin aplicarlo**.
 
 ```shell
 git stash drop "id-stash"
 ```
 
-6. `git stash clear` (_Elimina todos los stash_)
-		==Elimina todo el contenido== de la sección de los stash.
+6. `git stash clear` (Elimina todos los stash)
+		**Elimina todo el contenido** de la sección de los stash.
 
 ```shell
 git stash clear
@@ -361,13 +361,13 @@ git stash clear
 
 **GitHub** es una **plataforma en la nube basada en Git** que sirve como **hub** (_centro_) para **alojar**, **gestionar**, **colaborar en proyectos** de desarrolladores de software.
 
-Su ==concepto principal== es el de ser el "_Facebook de los programadores_" en donde **equipos** y **comunidades comparten código**, **resuelven problemas** y **construyen software** juntos.
+Su **concepto principal** es el de ser el "Facebook de los programadores" en donde **equipos** y **comunidades comparten código**, **resuelven problemas** y **construyen software** juntos.
 
 ### Concepto principal
 
-"_Colaboración y control de versiones en la nube_"
+"Colaboración y control de versiones en la nube"
 
-==GitHub extiende las capacidades== de Git (_que es local_) ==a un entorno remoto== y social.
+**GitHub extiende las capacidades** de Git (que es local) **a un entorno remoto** y social.
 
 ### GitHub nos permite
 
@@ -385,11 +385,11 @@ Su ==concepto principal== es el de ser el "_Facebook de los programadores_" en d
 
 #### Diferencias clave entre Git Y GitHub
 
-| Git                                                                                                                              | GitHub                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| ==Sistema de control de versiones distribuido== que ==permite mostrar cambios== en archivos y ==coordinar el trabajo== en equipo | ==Plataforma en la nube basada en Git== que ofrece ==alojamiento de colaboración== y ==gestión== de proyectos |
-| Es un ==software local== (_se instala en tu computadora_)                                                                        | Es un ==servicio en la nube==  (_requiere conexión a Internet_)                                               |
-| Creado por **Linus Torvalds** (_2005_) para el ==desarrollo del kernel de LInux==                                                | Fundado en 2008 (_adquirido por MIcrosoft en 2018_)                                                           |
+| Git                                                                                                                  | GitHub                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Sistema de control de versiones** que **permite mostrar cambios** en archivos y **coordinar el trabajo** en equipo | **Plataforma en la nube basada en Git** que ofrece **alojamiento de colaboración** y **gestión** de proyectos |
+| Es un **software local** (se instala en tu computadora)                                                              | Es un **servicio en la nube**  (requiere conexión a Internet)                                                 |
+| Creado por **Linus Torvalds** (_2005) para el **desarrollo del kernel de LInux**                                     | Fundado en 2008 (adquirido por MIcrosoft en 2018)                                                             |
 #### Funcionalidad principal
 
 | Git                                                                                  | GitHub                                                                     |
@@ -403,26 +403,26 @@ Su ==concepto principal== es el de ser el "_Facebook de los programadores_" en d
 
 El **Protocolo Secure Shell (SSH)** es un **protocolo criptografico de red** diseñado para **operar servicios** de la red de **manera segura** sobre una **red no segura**.
 
-Fue creado e 1995 por **Tatu Ylone** para **remplazar protocolos inseguros** como **Telnet** o **RSH**, que **transmiten credenciales de autenticación** (_como usuario y contraseña_) en **texto plano**, lo que significa un riesgo significativo de intercepción de terceros.
+Fue creado e 1995 por **Tatu Ylone** para **remplazar protocolos inseguros** como **Telnet** o **RSH**, que **transmiten credenciales de autenticación** (como usuario y contraseña) en **texto plano**, lo que significa un riesgo significativo de intercepción de terceros.
 
 #### 1.- Seguridad y el "Túnel de Cifrado"
 
-La seguridad fundamental de SSH ==radica== en sus ==mecanismos de cifrado==, que ==oculta el contenido de transmisión== de cualquier observador.
+La seguridad fundamental de SSH **radica** en sus **mecanismos de cifrado**, que **oculta el contenido de transmisión** de cualquier observador.
 
-Este proceso crea un "_túnel seguro_" o cifrado donde toda la transmisión (_comandos, datos o autenticación_) viaja de manera incomprensible para un interceptante.
+Este proceso crea un "túnel seguro" o cifrado donde toda la transmisión (comandos, datos o autenticación) viaja de manera incomprensible para un interceptante.
 
 Este **túnel seguro** se **establece** generalmente sobre el **puerto TCP 22** el cual esta **asignado** y es el **puerto de escucha estándar** por los **servidores SSH**.
 
-El puerto 22 es la "_puerta de encuentro_", mientras que el "_túnel_" es la conexión cifrada que se forma a tráves de él.
+El puerto 22 es la "puerta de encuentro", mientras que el "túnel" es la conexión cifrada que se forma a tráves de él.
 
 #### 2.- Autenticación basada en claves
 
-A diferencia de los métodos tradicionales de usuario y contraseña, SSH utiliza la criptografia de clave pública para autenticar tanto al equipo remoto (_servidor_) como al usuario.
+A diferencia de los métodos tradicionales de usuario y contraseña, SSH utiliza la criptografia de clave pública para autenticar tanto al equipo remoto (servidor) como al usuario.
 
-Este método implica el uso de **un par de claves** (_o llaves_).
+Este método implica el uso de **un par de claves** (o llaves).
 
 - **Una clave privada:** Se genera en tu computadora local y debe mantenerse **estrictamente confidencial**. Es crucial que esta clave privada **nunca se transfiera a través de la red** durante el proceso de autenticación.
-- **Una clave pública:** Se genera junto con la privada y se comparte con el servidor remoto (_en este caso GitHub_). El servidor la utiliza para verificar que posees la clave privada correspondiente, sin requerir que esta ultima se transfiera.
+- **Una clave pública:** Se genera junto con la privada y se comparte con el servidor remoto (en este caso GitHub). El servidor la utiliza para verificar que posees la clave privada correspondiente, sin requerir que esta ultima se transfiera.
 
 #### 3.- Evolución del protocolo
 
@@ -433,30 +433,30 @@ La versión 1 se considera vieja y con fallas de diseño, por eso es mejor evita
 
 #### 4.- ¿Cómo GitHub utiliza SSH para autenticación?
 
-GitHub utiliza el protocolo SSH para permitir a sus usuarios **conectarse** y **autenticarse** con sus repositorios sin la necesidad de proporcionar su **nombre de usuario** y un **Personal Access Token** (_PAT_) en  cada visita.
+GitHub utiliza el protocolo SSH para permitir a sus usuarios **conectarse** y **autenticarse** con sus repositorios sin la necesidad de proporcionar su **nombre de usuario** y un **Personal Access Token** (PAT) en  cada visita.
 
-Por ello, el **usuario debe generar un nuevo par de claves SSH** (_privada y pública_)en su equipo local y **añadir** la clave SSH pública a su cuenta de GitHub.
+Por ello, el **usuario debe generar un nuevo par de claves SSH** (privada y pública)en su equipo local y **añadir** la clave SSH pública a su cuenta de GitHub.
 
-Al intentar conectarse (_Ej: para realizar un "push"_) tu cliente SSH y el servidor de GitHub realizan un **desafió criptografico** para verificar la posesión de la clave privada correspondiente a la pública registrada, sin que la clave privada abandone el sistema.
+Al intentar conectarse (Ej: para realizar un "push") tu cliente SSH y el servidor de GitHub realizan un **desafió criptografico** para verificar la posesión de la clave privada correspondiente a la pública registrada, sin que la clave privada abandone el sistema.
 
 Una vez autenticado, se establece el túnel cifrado para la comunicación.
 
 ### Comandos git fetch y git pull
-Estos comandos se usan para ==organizar tu repositorio local con los cambios del repositorio remoto== (_como los que están en GItHub_). Pero funcionan de manera diferente.
+Estos comandos se usan para **organizar tu repositorio local con los cambios del repositorio remoto** (como los que están en GItHub). Pero funcionan de manera diferente.
 
 #### 1.- git fech
-##### Descarga los cambios (_==verifica si hay nuevos cambios==_)
-==Descarga los cambios== más recientes ==del repositorio remoto== (_en GitHub_) ==pero no los aplica en tu código local==.
+##### Descarga los cambios (verifica si hay nuevos cambios)
+**Descarga los cambios** más recientes **del repositorio remoto** (en GitHub) **pero no los aplica en tu código local**.
 
 Dicho de otra manera:
 
-==Descarga== en local ==el historial de cambios==, ==pero sin descargar== los ==cambios==.
-Esto ==nos permite comparar los cambios antes de fusionarlos== (_merge_).
+**Descarga** en local **el historial de cambios**, **pero sin descargar** los **cambios**
+Esto **nos permite comparar los cambios antes de fusionarlos** (merge).
 
 #### 2.- git pull
 ##### Descargar y aplicar cambios
 
-==Descarga los cambios del repositorio remoto== (_fetch_) ==y los fusiona== (_merge_) ==automáticamente en el== repositorio ==local==.
+**Descarga los cambios del repositorio remoto** (fetch) **y los fusiona** (merge) **automáticamente en el** repositorio **local**.
 Es como un `git fetch` y un `git merge` en un solo comando.
 
 #### ¿Cuándo se usan?
@@ -474,7 +474,7 @@ git clone "url-repo-original"
 ```
 ### Comando git push
 
-Se usa para **enviar los cambios confirmados** "_commits_" de tu **repositorio local, al repositorio remoto** (_GitHub_}.
+Se usa para **enviar los cambios confirmados** "commits" de tu **repositorio local, al repositorio remoto** (GitHub).
 
 Es tu manera de compartir tu trabajo con el equipo o guardar una copia en la nube.
 
@@ -499,7 +499,7 @@ Luego, puedes sugerir tus cambios al autor original (Pull Request).
 
 ### ¿Qué es un Pull Request (PR) en GitHub?
  
-Una **Pull Request** (_o un PR_) **es una solicitud par fusionar tus cambios** (_en una rama o en un fork_) **con un repositorio principal**.
+Una **Pull Request** (o un PR) **es una solicitud par fusionar tus cambios** (en una rama o en un fork) **con un repositorio principal**.
 
 Es el **mecanismo central** para **contribuir a proyectos en GitHub**, ya sea en **equipo** o en **código abierto**.
 
@@ -514,15 +514,15 @@ El dueño revisar los cambios y decide si los acepta (merge) o rechaza las modif
 ##### **1.- Contribuciones a Open Source:** 
 Haces un fork, modificas y envías un PR al proyecto principal.
 ##### **2.- Trabajo en equipo:**
-Creas una rama (_feactures/login_) haces cambios y haces revisión.
+Creas una rama (feactures/login) haces cambios y haces revisión.
 ##### **3.- Corrección de bugs:**
 Solucionas un error y lo propones vía PR.
 #### Buenas practicas para  PRs efectivos
 
 - **Títulos descriptivos:** 
-		Ej: "_Corrección en el formulario login_"
+		Ej: "Corrección en el formulario login"
 - **Descripciones detalladas:**
 		Explica qué, por qué y cómo se hicieron los cambios.
 - **PRs pequeños:**
-- Enfocate en un solo cambio (_Ej: un bug o feature_). Es más fácil de revisar.
+- Enfocate en un solo cambio (Ej: un bug o feature). Es más fácil de revisar.
 
