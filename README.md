@@ -148,8 +148,19 @@ Es especialmente útil para **excluir archivos generados** **automáticamente**,
 - Es **ideal para revisar que cosas se han editado antes de** preparar archivos para **hacer** `commit`
 ![git-diff](<IMGs/git diff.png>)
 
- <p style="color: #E3170A; font-weight: bold;">- : Lineas eliminadas (rojo en la terminal)</p>
-<p style="color: #70EE9C; font-weight: bold;">+ : Lineas añadidas (verde en la terminal)</p>
+<div style="background-color: #22223b; 
+display: flex; 
+flex-direction: column; justify-content: center; aligh-items: center; 
+width: 100%;
+height: auto; 
+padding: 15px;
+border: none;
+border-radius: 20px;">
+
+ <p style="color: #E3170A; font-weight: bold; font-size: 1rem; margin-top: 10px;"> - : Lineas eliminadas (rojo en la terminal)</p>
+<p style="color: #70EE9C; font-weight: bold; font-size: 1rem; margin-botton: 10px"> + : Lineas añadidas (verde en la terminal)</p>
+</div>
+
 
 ### Desplazamiento en una rama (Moverse entre commits)
 
