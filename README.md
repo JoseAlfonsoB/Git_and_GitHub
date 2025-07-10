@@ -505,8 +505,7 @@ Hacer un fork es como fotocopiar el libro para tomar notas y hacer cambios en tu
 Luego, puedes sugerir tus cambios al autor original (Pull Request).
 ```
 
-![[Diagrama-Fork.png]]
-
+![Digrama-Fork](IMGs/Diagrama-Fork.png)
 
 ### ¿Qué es un Pull Request (PR) en GitHub?
  
