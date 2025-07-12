@@ -261,11 +261,11 @@ git tag -a V2.0.0 -m "mesanje"
 Las ramas en Git **son lineas de desarrollo independientes** que **permiten trabajar en diferentes características, creaciones o experimentos** sin afectar el código principal.
 
 ##### Analogía 
-```txt
-Imagina un árbol.
+
+**Imagina un árbol.**
 - El tronco principal (main o master) es la versión estable.
 - Las ramas son derivaciones donde puedes probar cosas nuevas sin romper el tronco.
-```
+
 
 ![Ramas-Git](<IMGs/Git Ramas.png>)
 ##### ¿Cómo funcionan?
@@ -318,9 +318,9 @@ git merge login
 El **stash** es un "cajon temporal" donde **git guarda cambios no guardados** (en el Workging Directory o en el Staging Area) **para que puedas cambiar de ramas sin perder los cambios**.
 
 ###### Analogía
-```txt
+
 Imagina que estas escribiendo un documento y alguien te interrumpe. En lugar de guardarlo como versión final (_commit_) lo dejas en un post-it (_stash_) para recordarlo más tarde.
-```
+
 
 ###### Comandos esenciales
 
@@ -499,11 +499,11 @@ git push "nombre-del-remoto" "nombre-de-rama"
 Un **fork** es una **copia personal de un repositorio de otro usuario** en la cuenta de **GitHub**. Te **permite experimentar, modificar** y **contribuir** al **proyecto original** sin **afectarlo directamente**.
 
 ##### Analogía
-```txt
+
 Imagina que el repositorio original es un libro en una biblioteca pública.
 Hacer un fork es como fotocopiar el libro para tomar notas y hacer cambios en tu copia.
 Luego, puedes sugerir tus cambios al autor original (Pull Request).
-```
+
 
 ![Digrama-Fork](IMGs/Diagrama-Fork.png)
 
@@ -514,11 +514,11 @@ Una **Pull Request** (o un PR) **es una solicitud par fusionar tus cambios** (en
 Es el **mecanismo central** para **contribuir a proyectos en GitHub**, ya sea en **equipo** o en **código abierto**.
 
 ###### Analogía
-```txt
+
 Imagina que el proyecto principal es un documento compartido (como un Google Doc).
 Tú hace una copia, editas una sección y propones tus cambios al dueño del documento.
 El dueño revisar los cambios y decide si los acepta (merge) o rechaza las modificaciones.
-```
+
 
 #### Tipos comunes de PRs
 ##### **1.- Contribuciones a Open Source:** 
